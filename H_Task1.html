@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Домашняя работа</title>
+    <style>
+        .firstblock {
+            display: flex;
+            justify-content: space-around;
+            padding: 100px;
+        }
+        .firstblock>div {
+            border: 2px solid black;
+        }
+        .secondblock {
+            display: flex;
+            justify-content: space-around;
+            padding: 100px;
+        }
+        .secondblock > div {
+            display: none;
+            position: relative;
+            top:-226px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="firstblock">
+    <div class="block">1</div>
+    <div class="block">2</div>
+    <div class="block">3</div>
+</div>
+    <div class="secondblock">
+        <div class="block">a</div>
+        <div class="block">b</div>
+        <div class="block">c</div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $('.firstblock > .block').on('click', ()=>{
+        $('.secondblock > .block').show();
+        $('.secondblock > .block').animate({top:'-150px'},1000,function (){
+
+        })
+    });
+</script>
+</body>
+</html>
